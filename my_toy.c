@@ -167,8 +167,7 @@ static int toy_init(void)
 	 * any type of dynamic kobjects, where the name and number are
 	 * not known ahead of time.
 	 */
-	toy_kobj = kobject_create_and_add("toy",NULL);
-	//toy_kobj = kobject_create_and_add("toy", kernel_kobj);
+	toy_kobj = kobject_create_and_add("toy", kernel_kobj);
 	if (!toy_kobj)
 		return -ENOMEM;
 
